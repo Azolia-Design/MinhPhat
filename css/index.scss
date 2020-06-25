@@ -59,11 +59,18 @@ html {
         }
     
         .account {
+            display: block;
             width: 40px;
             height: 40px;           
             
             grid-column: 1/2;
             grid-row: 1/2;
+            box-shadow: none;
+            transition: box-shadow 100ms ease-out;
+
+            &:hover {
+                box-shadow: 0px 2px 2px rgba(10, 16, 34, 0.29);
+            }
 
             a {
                 display: block;
@@ -78,6 +85,13 @@ html {
             grid-column: 2/3;
             grid-row: 1/2;
             position: relative;
+
+            box-shadow: none;
+            transition: box-shadow 100ms ease-out;
+
+            &:hover {
+                box-shadow: 0px 2px 2px rgba(10, 16, 34, 0.29);
+            }
 
             a {
                 display: block;
@@ -96,7 +110,7 @@ html {
                 line-height: 18px;                
                 padding: 4px 7px 3px 7px;
                 top: -5px;
-                right: -10px;
+                left: calc(100% - 10px);
                 text-align: center;
                 border-radius: 4px;
                 box-shadow: 0px 2px 2px rgba(10, 16, 34, 0.29);
@@ -122,6 +136,12 @@ html {
             grid-column: 4/5;
             grid-row: 1/2;
             background-color: var(--primary);
+            box-shadow: none;
+            transition: box-shadow 100ms ease-out;
+
+            &:hover {
+                box-shadow: 0px 2px 2px rgba(10, 16, 34, 0.29);
+            }
 
             a {
                 display: block;
@@ -149,6 +169,13 @@ html {
         .searchbar {
             grid-column: 1/5;
             grid-row: 2/3;
+
+            box-shadow: none;
+            transition: box-shadow 100ms ease-out;
+
+            &:hover {
+                box-shadow: 0px 2px 2px rgba(10, 16, 34, 0.29);
+            }
 
             form {
                 width: 100%;
@@ -565,6 +592,13 @@ html {
 
                 .banner_sub {                                        
                     height: 150px;
+                    background: url(/Assets/banner_sub.png) center center no-repeat;
+                    background-size: cover;
+
+                    &:nth-child(3) {
+                        background: url(/Assets/banner_sub_2.png) center center no-repeat;
+                        background-size: cover;
+                    }
                 }
 
             }
@@ -623,7 +657,7 @@ html {
                         font-size: 14px;
                         line-height: 16px;
                         color: var(--gray);
-                        display: inline-block;
+                        display: inline-block;                        
 
                         &:hover {
                             color:var(--blue);
@@ -649,9 +683,18 @@ html {
                     grid-gap: 20px;
 
                     .product {
-                        height: 481px;
+                        display: block;
+                        min-height: auto;
+                        height: 100%;
                         border-radius: 8px;
                         background-color: var(--white);
+                        position: relative;
+                        box-shadow: 0px 2px 2px rgba(10, 16, 34, 0.29);
+                        transition: box-shadow 100ms ease-out;
+
+                        &:hover {
+                            box-shadow: 0px 10px 10px rgba(10, 16, 34, 0.29);
+                        }
 
                         .thumb {
                             margin: 20px;
@@ -669,7 +712,7 @@ html {
                         }
 
                         .info {
-                            margin: 0 26px 26px 26px;
+                            margin: 0 26px 80px 26px;
 
                             h3 {
                                 font-weight: 500;
@@ -677,6 +720,51 @@ html {
                                 line-height: 23px;
                                 color: var(--black);                                
                             }
+
+                            p.colour {
+                                margin-top: 15px;
+                                font-weight: normal;
+                                font-size: 16px;
+                                line-height: 18px;
+                                color: var(--black);       
+
+                                span {
+                                    display: inline-block;
+                                    width: 18px;
+                                    height: 18px;
+                                    background-color: var(--colour-white);
+                                    border-radius: 9px;
+                                    margin: -2px 13px 0 0;
+                                }
+                            }
+
+                            p.price {
+                                margin-right: 80px;
+                                left: 26px;
+                                bottom: 26px;
+                                position: absolute;
+                                font-weight: normal;
+                                font-size: 20px;
+                                line-height: 23px;
+                                color: var(--black);                                
+                            }
+                        }
+
+                        .new {
+                            position: absolute;
+                            display: inline-block;
+                            right: -2px;
+                            bottom: 20px;
+                            font-weight: bold;
+                            font-size: 16px;
+                            line-height: 19px;
+                            letter-spacing: 0.14em;    
+                            color: var(--white);                        
+                            background-color: var(--blue);
+                            text-transform: uppercase;
+                            padding: 8px 17px;
+                            border-radius: 8px 0 0 8px;
+                            box-shadow: 0px 1px 1px rgba(10, 16, 34, 0.29);
                         }
                     }
                 }
@@ -685,6 +773,8 @@ html {
                     height: 150px;
                     border-radius: 8px;
                     background-color: var(--white);
+                    background: url(/Assets/banner_featured.png) center center no-repeat;
+                    background-size: cover;
                 }
             }
         }
@@ -702,10 +792,22 @@ html {
             }
 
             .policies_content {
-                height: 200px;
+                display: grid;
+                grid-template-columns: auto;
+                grid-gap: 15px;
+
+                padding: 20px;
                 background-color: var(--white);
                 border-radius: 8px;
                 margin-bottom: 40px;
+
+                a {
+                    display: block;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: var(--gray);                    
+                }
             }
         }
     }
@@ -761,7 +863,8 @@ html {
                         grid-template-columns: 1fr 1fr;
     
                         .product {
-                            height: 484px;
+
+                            height: 100%;
                         }
                     }                        
                 }
@@ -775,8 +878,14 @@ html {
                 }
     
                 .policies_content {
-                    height: 118px;
+                    grid-template-columns: 1fr 1fr;
                     margin-bottom: 60px;
+                    padding: 20px 0;
+                    grid-column-gap: 20px;
+
+                    a {
+                        margin: 0 20px;                
+                    }
                 }
             }
         }
@@ -811,10 +920,16 @@ html {
                         grid-template-columns: 1fr 1fr 1fr;
     
                         .product {
-                            height: 345px;
+
                             margin-bottom: 10px;
                         }
                     }
+                }
+            }
+
+            .policies {
+                .policies_content {
+                    grid-template-columns: 1fr 1fr 1fr;
                 }
             }
         }
@@ -868,7 +983,7 @@ html {
                         grid-template-columns: 1fr 1fr 1fr 1fr;
     
                         .product {
-                            height: 401px;
+                            
                             margin-bottom: 20px;
                         }
                     }
@@ -881,7 +996,7 @@ html {
 
             .policies {
                 .policies_content {
-                    height: 90px;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
                     margin-bottom: 80px;
                 }
             }
@@ -891,8 +1006,44 @@ html {
 
     .footer {
         width: 100%;
-        height: 656px;
         background-color: var(--primary);
+        color: var(--white);
+
+        .container {
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 25px;
+
+            .logo {
+                width: auto;
+                height: 50px;
+                background: url(../Assets/Logo_footer.svg) center center no-repeat;
+                margin: 40px 0 15px 0;                
+            }
+
+            div {
+                margin: 0 30px;
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 12px;                    
+                }
+
+                p {
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: var(--gray);                    
+                }
+            }
+
+            .copyright {
+                margin: 15px 30px 30px 30px;
+                text-align: center;
+            }
+        }
     }
 
     @media only screen and (min-width: 768px) {
