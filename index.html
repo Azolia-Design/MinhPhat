@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MinhPhatMobile</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <nav id="nav">
+                <div class="account">
+                    <a href="#"><img src="/Assets/user.svg" alt=""></a>
+                </div>
+                <div class="cart">
+                    <a href="#"><img src="/Assets/shopping-cart.svg" alt=""></a>
+                    <span class="cart_qty">3</span>
+                </div>
+                <div class="logo"></div>
+                <div class="logo_min"></div>
+                <div class="menu_toggle">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                        <p>menu</p>
+                    </a>
+                </div>
+                <div class="searchbar">
+                    <form action="">
+                        <input type="text" placeholder="Tìm sản phẩm, danh mục ..." name="search">
+                        <button type="submit">
+                            <i class="fa fa-search"></i>
+                            <p>Tìm kiếm</p>
+                        </button>
+                    </form>
+                </div>
+            </nav>
+            <div class="menu">
+                <div class="logo_min_menu"></div>
+                <div class="menu_toggle_close"></div>
+                <div class="menu_categories">
+                    <div class="menu_category" onclick="myFunction()">
+                        <div class="menu_subs" id="myDIV">
+                            <div class="menu_sub"></div>
+                            <div class="menu_sub"></div>
+                        </div>
+                    </div>
+                    <div class="menu_category"></div>
+                    <div class="menu_category"></div>
+                    <div class="menu_category"></div>
+                    <div class="menu_category"></div>
+                    <div class="menu_category"></div>
+                </div>
+                
+            </div>
+            <div class="blackout"></div>
+            <div class="ecommerce">               
+                <div class="content">
+                    <div class="banners">
+                        <div class="banner_main"></div>
+                        <div class="banner_sub"></div>
+                        <div class="banner_sub"></div>
+                    </div>
+                    <div class="featured">
+                        <div class="featured_cat">                       
+                            <a href="#" class="cat">Macbook Pro</a>
+                            <a href="#" class="sub">Macbook Pro 2020</a>   
+                            <a href="#" class="sub">Macbook Pro 2020</a>                        
+                            <a href="#" class="sub">Macbook Pro 2020</a>
+                            <a href="#" class="sub">Macbook Pro 2020</a>  
+                        </div>
+                        <div class="fade"></div>
+                        <div class="featured_products">
+                            <div class="product">
+                                <div class="thumb">
+                                    <img src="/Products/mbp13touch-space-select-202005.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Macbook Pro 2020 13"</h3>
+                                    <p><span></span> Silver</p>
+                                    <p>28.000.000 VNĐ</p>
+                                </div>
+                            </div>
+                            <div class="product"></div>
+                            <div class="product"></div>
+                            <div class="product"></div>
+                        </div>
+                        <div class="featured_banner"></div>
+                    </div>
+                </div>
+                <div class="policies">
+                    <p>Policies & Supports</p>
+                    <div class="policies_content"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
