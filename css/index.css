@@ -190,14 +190,14 @@ nav .menu_toggle:hover {
 
 nav .menu_toggle a {
   display: block;
-  padding: 12px 0 11px 14px;
+  padding: 11px 0 11px 14px;
 }
 
 nav .menu_toggle a i {
   color: #fff;
   font-weight: 900;
   font-size: 18px;
-  line-height: 17px;
+  line-height: 18px;
 }
 
 nav .menu_toggle a p {
@@ -404,7 +404,8 @@ nav.scroll .searchbar {
   background-color: var(--bg);
   z-index: 1000;
   padding: 15px 15px 0 15px;
-  display: none;
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: 40px 40px auto 90px;
       grid-template-columns: 40px 40px auto 90px;
   -ms-grid-rows: 40px auto;
@@ -428,13 +429,49 @@ nav.scroll .searchbar {
 
 .menu .menu_toggle_close {
   border-radius: 8px;
-  background-color: var(--white);
+  background-color: var(--primary);
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: -webkit-box-shadow 100ms ease-out;
+  transition: -webkit-box-shadow 100ms ease-out;
+  transition: box-shadow 100ms ease-out;
+  transition: box-shadow 100ms ease-out, -webkit-box-shadow 100ms ease-out;
+}
+
+.menu .menu_toggle_close:hover {
+  -webkit-box-shadow: 0px 2px 2px rgba(10, 16, 34, 0.29);
+          box-shadow: 0px 2px 2px rgba(10, 16, 34, 0.29);
+}
+
+.menu .menu_toggle_close a {
+  display: block;
+  padding: 11px 0 11px 14px;
+}
+
+.menu .menu_toggle_close a i {
+  display: inline-block;
+  width: 15.75px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.menu .menu_toggle_close a p {
+  display: inline;
+  margin-left: 6px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
 }
 
 .menu .menu_categories {
@@ -451,6 +488,44 @@ nav.scroll .searchbar {
   background-color: var(--white);
   border-radius: 8px;
   margin-bottom: 15px;
+}
+
+.menu .menu_categories .menu_category a {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.menu .menu_categories .menu_category a i {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 22px 0 9px;
+  color: var(--gray);
+}
+
+.menu .menu_categories .menu_category a p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--gray);
+}
+
+.menu .menu_categories .menu_category a:hover {
+  background-color: #C3DBF9;
+  -webkit-box-shadow: 0px 2px 2px rgba(10, 16, 34, 0.29);
+          box-shadow: 0px 2px 2px rgba(10, 16, 34, 0.29);
+}
+
+.menu .menu_categories .menu_category a:hover > i {
+  color: var(--blue);
+}
+
+.menu .menu_categories .menu_category a:hover > p {
+  color: var(--black);
 }
 
 .menu .menu_categories .menu_category .menu_subs {
@@ -513,6 +588,29 @@ nav.scroll .searchbar {
   .menu .menu_categories .menu_category {
     height: 44px;
     margin-bottom: 20px;
+  }
+  .menu .menu_categories .menu_category a {
+    text-align: left;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40px auto;
+        grid-template-columns: 40px auto;
+    padding: 0 4px;
+    width: calc(100% - 8px);
+  }
+  .menu .menu_categories .menu_category a i {
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0;
+  }
+  .menu .menu_categories .menu_category a p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .menu .menu_categories .menu_category .menu_subs {
     left: calc(100vw - 293px);
@@ -583,6 +681,22 @@ nav.scroll .searchbar {
     height: 44px;
     margin-bottom: 20px;
   }
+  .menu .menu_categories .menu_category a {
+    text-align: left;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 48px auto;
+        grid-template-columns: 48px auto;
+    padding: 0 6px;
+    width: calc(100% - 12px);
+  }
+  .menu .menu_categories .menu_category a i {
+    margin: 0;
+  }
+  .menu .menu_categories .menu_category a p {
+    font-size: 18px;
+    line-height: 21px;
+  }
   .menu .menu_categories .menu_category .menu_subs {
     display: none;
     position: absolute;
@@ -618,6 +732,10 @@ nav.scroll .searchbar {
   .menu .menu_categories .menu_category {
     height: 50px;
     margin-bottom: 20px;
+  }
+  .menu .menu_categories .menu_category a i {
+    font-size: 18px;
+    line-height: 20px;
   }
   .menu .menu_categories .menu_category .menu_subs {
     left: 250px;

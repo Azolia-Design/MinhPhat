@@ -8,20 +8,20 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/0920ba6a9b.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
             <nav id="nav">
                 <div class="account">
                     <a href="#">
-                        <img src="/Assets/user.svg" alt="">
+                        <i class="fas fa-user"></i>
                         <p>Đăng ký</p>
                     </a>
                 </div>
                 <div class="cart">
                     <a href="#">
-                        <img src="/Assets/shopping-cart.svg" alt="">
+                        <i class="fas fa-shopping-cart"></i>
                         <p>Giỏ hàng</p>
                     </a>                    
                     <span class="cart_qty">03</span>
@@ -38,7 +38,7 @@
                     <form action="">
                         <input type="text" placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn..." name="search">
                         <button type="submit">
-                            <i class="fa fa-search"></i>
+                            <i class="fas fa-search"></i>
                             <p>Tìm kiếm</p>
                         </button>
                     </form>
@@ -46,19 +46,53 @@
             </nav>
             <div class="menu">
                 <div class="logo_min_menu"></div>
-                <div class="menu_toggle_close"></div>
+                <div class="menu_toggle_close">
+                    <a href="#">
+                        <i class="fas fa-times"></i>
+                        <p>menu</p>
+                    </a>
+                </div>
                 <div class="menu_categories">
                     <div class="menu_category" onclick="myFunction()">
+                        <a href="#">
+                            <i class="fas fa-mobile"></i>
+                            <p>iPhone</p>
+                        </a>
                         <div class="menu_subs" id="myDIV">
                             <div class="menu_sub"></div>
                             <div class="menu_sub"></div>
                         </div>
                     </div>
-                    <div class="menu_category"></div>
-                    <div class="menu_category"></div>
-                    <div class="menu_category"></div>
-                    <div class="menu_category"></div>
-                    <div class="menu_category"></div>
+                    <div class="menu_category">
+                        <a href="#">
+                            <i class="fas fa-tablet"></i>
+                            <p>iPad</p>
+                        </a>
+                    </div>
+                    <div class="menu_category">
+                        <a href="#">
+                            <i class="fas fa-laptop"></i>
+                            <p>Macbook</p>
+                        </a>
+                    </div>
+                    <div class="menu_category">
+                        <a href="#">
+                            <i class="fas fa-clock"></i>
+                            <p>Apple Watch</p>
+                        </a>
+                    </div>
+                    <div class="menu_category">
+                        <a href="#">
+                            <i class="fas fa-pen"></i>
+                            <p>Accessories</p>
+                        </a>
+                    </div>
+                    <div class="menu_category">
+                        <a href="#">
+                            <i class="fab fa-android"></i>
+                            <p>Android</p>
+                        </a>
+                    </div>
                 </div>
                 
             </div>
