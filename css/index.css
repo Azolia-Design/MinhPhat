@@ -597,6 +597,10 @@ nav.scroll .searchbar {
   margin-bottom: 14px;
 }
 
+.menu .menu_categories .menu_category .menu_subs .menu_sub .menu_sub_list a.cat:hover {
+  color: var(--blue);
+}
+
 .menu .menu_categories .menu_category .menu_subs .menu_sub .menu_sub_list a.sub {
   display: block;
   font-weight: normal;
@@ -604,6 +608,10 @@ nav.scroll .searchbar {
   line-height: 21px;
   color: var(--primary);
   margin-top: 8px;
+}
+
+.menu .menu_categories .menu_category .menu_subs .menu_sub .menu_sub_list a.sub:hover {
+  color: var(--light-blue);
 }
 
 .menu.scroll {
